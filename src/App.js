@@ -1,20 +1,25 @@
 import React from 'react';
 import { View, StatusBar, StyleSheet } from 'react-native';
 
-// Importação dos Components
-import Primeiro from './components/Primeiro'
+// import Primeiro from './components/Primeiro'
 // Multiplos Components ( Não recomendado )
-import Oficial, { Comp1, Comp2 } from './components/Multi'
+// import Oficial, { Comp1, Comp2 } from './components/Multi'
+import MinMax from './components/MinMax'
+
 
 export default  () => {
+    // console.warn("Hello, Warning Box")
     return (
         <>  
             <StatusBar backgroundColor="#FFF" barStyle="dark-content" />
             <View style={styles.container} >
-                <Primeiro />
+                {/* <Primeiro />
                 <Oficial />
                 <Comp1 />
-                <Comp2 />
+                <Comp2 /> */}
+                {/* Passando parametros pelo componente */}
+                {/* "Exemplo" -> Sting // {9} -> Numerico */}
+                <MinMax min={3} max="30" />
             </View>
         </>
     );
@@ -25,5 +30,6 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        padding: 20,
     },
 })
