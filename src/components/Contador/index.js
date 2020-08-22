@@ -1,15 +1,24 @@
-import React from 'react';
-import { View, Text, Button, useState } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, Button } from 'react-native';
 import GlobalStyles from '../GlobalStyles'
 
-export default (props) => {
-    let numero = 0
+export default ({ initial, step }) => {
+    // const [valor, funçaoAlteraValor] = useState(valorInicial)
+    const [number, setNumber] =  useState(initial)
+
+    const inc = () => {
+        setNumber(number + step)
+    }
+
+    const dec = () => {
+        setNumber(number - step)
+    }
 
     return (
             <View>
-                <Text>Contador: 0</Text>
-                <Button title="+" />
-                <Button title="-" />
+                <Text style={GlobalStyles.txtH1}>Contador: {number} </Text>
+                <Button title="+" onPress={inc} />
+                <Button title="-" onPress={dec} />
             </View>
     )
 }

@@ -12,5 +12,9 @@ export default StyleSheet.create({
     txtH3: {
         fontSize: 18,
         textAlign: 'center',
+    },
+    btn: {
+        marginTop: 10,
+        color:'red'
     }
 })
