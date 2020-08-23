@@ -8,8 +8,8 @@ import { View, StatusBar, StyleSheet } from 'react-native';
 // import Aleatorio from './components/Aleatorio'
 // import Buttons from './components/Button'
 // import Contador from './components/Contador'
-import Father from './components/directComunication/father'
-
+// import Father from './components/directComunication/father'
+import Father from './components/inderectComunication/father'
 
 export default  () => {
     // console.warn("Hello, Warning Box")
@@ -28,6 +28,7 @@ export default  () => {
                     <Aleatorio min={1} max={10}/>  
                     <Buttons />
                     <Contador initial={0} step={10} /> 
+                    <Father />
                 */}
                 <Father />
             </View>
