@@ -7,7 +7,8 @@ import { View, StatusBar, StyleSheet } from 'react-native';
 // import MinMax from './components/MinMax'
 // import Aleatorio from './components/Aleatorio'
 // import Buttons from './components/Button'
-import Contador from './components/Contador'
+// import Contador from './components/Contador'
+import Father from './components/directComunication/father'
 
 
 export default  () => {
@@ -26,8 +27,9 @@ export default  () => {
                     <MinMax min={3} max="30" /> 
                     <Aleatorio min={1} max={10}/>  
                     <Buttons />
+                    <Contador initial={0} step={10} /> 
                 */}
-                <Contador initial={0} step={10} /> 
+                <Father />
             </View>
         </>
     );
